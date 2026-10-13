@@ -1,0 +1,17 @@
+services:
+  app:
+    build: .
+    env_file:
+      - .env
+    environment:
+      APP_BIND: 0.0.0.0:3000
+      DATABASE_PATH: /data/whatsapp.sqlite
+      COOKIE_SECURE: "true"
+    ports:
+      - "3000:3000"
+    volumes:
+      - crm_bling_data:/data
+    restart: unless-stopped
+
+volumes:
+  crm_bling_data:

@@ -1,0 +1,9 @@
+.git
+.env
+.env.*
+!.env.example
+target
+data
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
